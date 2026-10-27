@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NZE Intelligence | The year your building reaches net zero</title>
+<meta name="description" content="NZE Intelligence balances the energy it takes to build a home with the energy it uses and generates, and tells designers the year it reaches realistic net zero.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky:#EAF1F2; --paper:#F7FAFA; --ink:#14302E; --muted:#4E6563;
+    --spruce:#2F6B5A; --sun:#E8A817; --line:#C9D8D7;
+    --font:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --sky:#0F1F1E; --paper:#132625; --ink:#E6EFEE; --muted:#9DB3B0; --spruce:#6FB59D; --sun:#F0BC3C; --line:#2A4442; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+
+  header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+  .brand{font-weight:800;font-stretch:115%;letter-spacing:-.01em;text-decoration:none;font-size:1.15rem}
+  nav a{margin-left:1.5rem;text-decoration:none;color:var(--muted)}
+  nav a:hover{color:var(--ink)}
+
+  .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;padding:3rem 0 4rem}
+  h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.02;font-weight:800;font-stretch:80%;letter-spacing:-.02em;margin:0 0 1.25rem}
+  .lede{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:0 0 2rem}
+  .actions{display:flex;flex-wrap:wrap;gap:1rem}
+  .btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600}
+  .btn.primary{background:var(--ink);color:var(--paper)}
+  .btn.secondary{border:1.5px solid var(--ink)}
+
+  .chart{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.25rem 1.25rem .75rem}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart figcaption{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+
+  section{padding:4rem 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-stretch:85%;font-weight:750;letter-spacing:-.01em;line-height:1.15;margin:0 0 1.5rem;max-width:40rem}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;padding:0;margin:0;counter-reset:s}
+  .steps li{counter-increment:s;border-left:3px solid var(--spruce);padding-left:1.1rem}
+  .steps li::before{content:"Step " counter(s);display:block;color:var(--spruce);font-weight:700;font-size:.9rem;margin-bottom:.35rem}
+  .steps h3{margin:0 0 .4rem;font-size:1.15rem}
+  .steps p{margin:0;color:var(--muted)}
+
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+  .fact strong{display:block;font-size:2.4rem;font-stretch:75%;font-weight:800;line-height:1}
+  .fact span{color:var(--muted)}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .pubs{list-style:none;padding:0;margin:0}
+  .pubs li{padding:1rem 0;border-bottom:1px solid var(--line)}
+  .pubs em{color:var(--muted);font-style:normal;display:block;font-size:.95rem}
+  p{max-width:38rem}
+
+  footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.9rem;color:var(--muted)}
+  footer p{margin:.25rem 0;max-width:none}
+
+  @media (max-width:860px){
+    .hero,.two{grid-template-columns:1fr}
+    .steps,.facts{grid-template-columns:1fr}
+    nav a{margin-left:1rem}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .curve{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.2s ease-out .3s forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#">NZE Intelligence</a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Know the year your building reaches net zero.</h1>
+        <p class="lede">Most net zero claims ignore the energy it takes to make a building. NZE Intelligence balances embodied energy, operational energy and on-site renewables, and tells you, at the design stage, when the energy debt is repaid.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://realisticnetzero.streamlit.app">Open the prototype</a>
+          <a class="btn secondary" href="#research">Read the research</a>
+        </div>
+      </div>
+
+      <figure class="chart">
+        <svg viewBox="0 0 520 320" role="img" aria-labelledby="ctitle cdesc">
+          <title id="ctitle">Cumulative energy balance over 50 years</title>
+          <desc id="cdesc">Three low-embodied-energy houses start with an energy debt and repay it through renewable surplus: timber after 32 years, reinforced concrete after 44, steel after 49.</desc>
+          <!-- axes: x 40..500 = years 0..50 ; y: 0 kWh at 200, -204,109 at 280... scaled -->
+          <line x1="40" y1="120" x2="500" y2="120" stroke="var(--sun)" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="46" y="112" fill="var(--muted)" font-size="12">Net zero</text>
+          <text x="46" y="138" fill="var(--muted)" font-size="12">Energy debt</text>
+          <line x1="40" y1="20" x2="40" y2="300" stroke="var(--line)"/>
+          <text x="40" y="316" fill="var(--muted)" font-size="12">Year 0</text>
+          <text x="455" y="316" fill="var(--muted)" font-size="12">Year 50</text>
+          <path class="curve" d="M40 283.3 L500 117.3" stroke="var(--muted)" stroke-width="2.5" fill="none"/>
+          <path class="curve" d="M40 264.8 L500 98.8" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+          <path class="curve" d="M40 227.0 L500 61.1" stroke="var(--spruce)" stroke-width="3" fill="none"/>
+          <circle cx="336.7" cy="120" r="5" fill="var(--spruce)"/>
+          <circle cx="441.3" cy="120" r="5" fill="var(--ink)"/>
+          <circle cx="492.6" cy="120" r="5" fill="var(--muted)"/>
+          <text x="276.7" y="80" fill="var(--spruce)" font-size="13" font-weight="700">Timber, 32 yrs</text>
+          <text x="329.3" y="182" fill="var(--ink)" font-size="13" font-weight="700">Concrete, 44 yrs</text>
+          <text x="406.6" y="216" fill="var(--muted)" font-size="13" font-weight="700">Steel, 49 yrs</text>
+        </svg>
+        <figcaption>Case study: the same two-storey London house built in three structural systems with low-embodied-energy materials, heat pump, PV and wind. Source: Ercal &amp; Shafique, Sustainable Horizons (2026).</figcaption>
+      </figure>
+    </div>
+
+    <section id="how">
+      <h2>From the first design model to a net zero year</h2>
+      <ol class="steps">
+        <li><h3>Measure what it takes to build</h3><p>Upload a Revit material take-off. Embodied energy is calculated for every material from established cradle-to-gate factors.</p></li>
+        <li><h3>Add how it will run</h3><p>Heating, cooling, lighting and appliances are set against the solar and wind energy the building can generate on site.</p></li>
+        <li><h3>See the year and what to change</h3><p>Get the year the building reaches realistic net zero, plus lower-energy material, design and renewable options that bring it forward.</p></li>
+      </ol>
+      <div class="facts">
+        <div class="fact"><strong>84%</strong><span>lower annual operational energy in the case-study house</span></div>
+        <div class="fact"><strong>up to 34%</strong><span>less embodied energy through material choice alone</span></div>
+        <div class="fact"><strong>17 years</strong><span>between the fastest and slowest structural system to reach net zero</span></div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="two">
+        <div>
+          <h2>Built on peer-reviewed research</h2>
+          <p>NZE Intelligence turns the Realistic Net Zero Energy Building (RNZEB) method into a design tool. The method was developed in a Master’s dissertation awarded the Dean’s Prize for Innovation and Impact at Brunel University London.</p>
+        </div>
+        <ul class="pubs">
+          <li><a href="https://doi.org/10.1016/j.horiz.2025.100163">Rethinking net zero: a new perspective on achieving net zero energy buildings</a><em>Ercal, O. and Shafique, M. Sustainable Horizons, 2026</em></li>
+          <li><a href="https://dx.doi.org/10.20517/cf.2026.02">From design to decarbonisation: a BIM-based comparative analysis of embodied carbon in buildings</a><em>Ercal, O. and Shafique, M. Carbon Footprints, 2026</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="two">
+        <div>
+          <h2>Founder</h2>
+          <p>Orhan Ercal is an architect and sustainability researcher with ten years of design and construction experience in the UK and Türkiye. He founded NZE Intelligence to give architects and developers a clear, early answer to the question that matters: when does this building actually reach net zero?</p>
+        </div>
+        <div>
+          <h2>Talk to us</h2>
+          <p>We are working with a small number of UK architects and housing developers on early pilots.</p>
+          <a class="btn primary" href="mailto:orhanercal@gmail.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>NZE Intelligence Ltd is a private limited company registered in England and Wales, company number 17544117.</p>
+    <p>Registered office: 271b High Road, London N15 4RR, United Kingdom.</p>
+    <p>© 2026 NZE Intelligence Ltd</p>
+  </footer>
+</div>
+</body>
+</html>
