@@ -3,74 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NZE Intelligence | The year your building reaches net zero</title>
-<meta name="description" content="NZE Intelligence balances the energy it takes to build a home with the energy it uses and generates, and tells designers the year it reaches realistic net zero.">
+<title>NZE Intelligence | Buildings that genuinely reach net zero</title>
+<meta name="description" content="NZE Intelligence helps architects and housing developers design buildings that genuinely reach net zero energy, balancing embodied energy, operational energy and on-site renewables.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NZE Intelligence: buildings that genuinely reach net zero">
+<meta property="og:description" content="Know how your building reaches realistic net zero, before the design is fixed.">
+<meta property="og:url" content="https://www.nzeintelligence.co.uk/">
+<meta property="og:image" content="https://www.nzeintelligence.co.uk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314302E'/><text x='32' y='42' font-family='Arial' font-weight='700' font-size='24' fill='%23E8A817' text-anchor='middle'>NZE</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --sky:#EAF1F2; --paper:#F7FAFA; --ink:#14302E; --muted:#4E6563;
-    --spruce:#2F6B5A; --sun:#E8A817; --line:#C9D8D7;
-    --font:"Archivo", "Helvetica Neue", Arial, sans-serif;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --sky:#0F1F1E; --paper:#132625; --ink:#E6EFEE; --muted:#9DB3B0; --spruce:#6FB59D; --sun:#F0BC3C; --line:#2A4442; }
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  :root{--sky:#EAF1F2;--paper:#F7FAFA;--ink:#14302E;--muted:#4E6563;--spruce:#2F6B5A;--sun:#E8A817;--line:#C9D8D7;--font:"Archivo","Helvetica Neue",Arial,sans-serif}
+  @media (prefers-color-scheme:dark){:root{--sky:#0F1F1E;--paper:#132625;--ink:#E6EFEE;--muted:#9DB3B0;--spruce:#6FB59D;--sun:#F0BC3C;--line:#2A4442}}
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
   body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6}
-  a{color:inherit}
-  a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+  a{color:inherit} a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
   .wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
-
-  header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
-  .brand{font-weight:800;font-stretch:115%;letter-spacing:-.01em;text-decoration:none;font-size:1.15rem}
-  nav a{margin-left:1.5rem;text-decoration:none;color:var(--muted)}
-  nav a:hover{color:var(--ink)}
-
+  header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1rem;flex-wrap:wrap}
+  .brand{font-weight:800;font-stretch:115%;text-decoration:none;font-size:1.15rem}
+  nav a{margin-left:1.4rem;text-decoration:none;color:var(--muted)} nav a:hover{color:var(--ink)}
   .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;padding:3rem 0 4rem}
-  h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.02;font-weight:800;font-stretch:80%;letter-spacing:-.02em;margin:0 0 1.25rem}
+  h1{font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.03;font-weight:800;font-stretch:80%;letter-spacing:-.02em;margin:0 0 1.25rem}
   .lede{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:0 0 2rem}
   .actions{display:flex;flex-wrap:wrap;gap:1rem}
   .btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600}
-  .btn.primary{background:var(--ink);color:var(--paper)}
-  .btn.secondary{border:1.5px solid var(--ink)}
-
-  .chart{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.25rem 1.25rem .75rem}
+  .btn.primary{background:var(--ink);color:var(--paper)} .btn.secondary{border:1.5px solid var(--ink)}
+  .chart{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.25rem 1.25rem .75rem;margin:0}
   .chart svg{width:100%;height:auto;display:block}
   .chart figcaption{font-size:.85rem;color:var(--muted);margin-top:.5rem}
-
   section{padding:4rem 0;border-top:1px solid var(--line)}
-  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-stretch:85%;font-weight:750;letter-spacing:-.01em;line-height:1.15;margin:0 0 1.5rem;max-width:40rem}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;padding:0;margin:0;counter-reset:s}
-  .steps li{counter-increment:s;border-left:3px solid var(--spruce);padding-left:1.1rem}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-stretch:85%;font-weight:750;line-height:1.15;margin:0 0 1.5rem;max-width:42rem}
+  h3{margin:0 0 .4rem;font-size:1.15rem}
+  p{max-width:40rem}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;padding:0;margin:0}
+  .three li{border-left:3px solid var(--spruce);padding-left:1.1rem}
+  .three p{margin:0;color:var(--muted)}
+  .steps{counter-reset:s} .steps li{counter-increment:s}
   .steps li::before{content:"Step " counter(s);display:block;color:var(--spruce);font-weight:700;font-size:.9rem;margin-bottom:.35rem}
-  .steps h3{margin:0 0 .4rem;font-size:1.15rem}
-  .steps p{margin:0;color:var(--muted)}
-
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
   .fact strong{display:block;font-size:2.4rem;font-stretch:75%;font-weight:800;line-height:1}
   .fact span{color:var(--muted)}
-
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
   .pubs{list-style:none;padding:0;margin:0}
   .pubs li{padding:1rem 0;border-bottom:1px solid var(--line)}
   .pubs em{color:var(--muted);font-style:normal;display:block;font-size:.95rem}
-  p{max-width:38rem}
-
+  .note{font-size:.9rem;color:var(--muted)}
+  .tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--spruce);border:1px solid var(--spruce);border-radius:999px;padding:.1rem .6rem;margin-bottom:.8rem}
+  .mission{font-size:1.3rem;line-height:1.5;max-width:48rem}
+  .pilot{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:2rem}
   footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.9rem;color:var(--muted)}
   footer p{margin:.25rem 0;max-width:none}
-
-  @media (max-width:860px){
-    .hero,.two{grid-template-columns:1fr}
-    .steps,.facts{grid-template-columns:1fr}
-    nav a{margin-left:1rem}
-  }
-  @media (prefers-reduced-motion:no-preference){
-    .curve{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.2s ease-out .3s forwards}
-    @keyframes draw{to{stroke-dashoffset:0}}
-  }
+  @media (max-width:860px){.hero,.two{grid-template-columns:1fr}.three,.facts{grid-template-columns:1fr}nav a{margin-left:0;margin-right:1rem}}
+  @media (prefers-reduced-motion:no-preference){.curve{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.2s ease-out .3s forwards}@keyframes draw{to{stroke-dashoffset:0}}}
 </style>
 </head>
 <body>
@@ -78,71 +65,120 @@
   <header>
     <a class="brand" href="#">NZE Intelligence</a>
     <nav aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
+      <a href="#problem">Problem</a><a href="#how">How it works</a><a href="#next">AI</a><a href="#research">Research</a><a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
     <div class="hero">
       <div>
-        <h1>Know the year your building reaches net zero.</h1>
-        <p class="lede">Most net zero claims ignore the energy it takes to make a building. NZE Intelligence balances embodied energy, operational energy and on-site renewables, and tells you, at the design stage, when the energy debt is repaid.</p>
+        <h1>Design buildings that genuinely reach net zero.</h1>
+        <p class="lede">Know how your building reaches realistic net zero, before the design is fixed. NZE Intelligence balances the energy it takes to build, the energy a building uses and the renewable energy it generates, and shows what to change to get there.</p>
         <div class="actions">
           <a class="btn primary" href="https://realisticnetzero.streamlit.app">Open the prototype</a>
-          <a class="btn secondary" href="#research">Read the research</a>
+          <a class="btn secondary" href="#pilot">Join the 2027 pilot</a>
         </div>
+        <p class="note">Try the prototype: compare traditional and RNZE designs, or add each measure one at a time to see its effect. A concept-stage decision tool, not a compliance tool.</p>
       </div>
-
       <figure class="chart">
         <svg viewBox="0 0 520 320" role="img" aria-labelledby="ctitle cdesc">
-          <title id="ctitle">Cumulative energy balance over 50 years</title>
-          <desc id="cdesc">Three low-embodied-energy houses start with an energy debt and repay it through renewable surplus: timber after 32 years, reinforced concrete after 44, steel after 49.</desc>
-          <!-- axes: x 40..500 = years 0..50 ; y: 0 kWh at 200, -204,109 at 280... scaled -->
-          <line x1="40" y1="120" x2="500" y2="120" stroke="var(--sun)" stroke-width="2" stroke-dasharray="6 5"/>
-          <text x="46" y="112" fill="var(--muted)" font-size="12">Net zero</text>
-          <text x="46" y="138" fill="var(--muted)" font-size="12">Energy debt</text>
-          <line x1="40" y1="20" x2="40" y2="300" stroke="var(--line)"/>
-          <text x="40" y="316" fill="var(--muted)" font-size="12">Year 0</text>
-          <text x="455" y="316" fill="var(--muted)" font-size="12">Year 50</text>
-          <path class="curve" d="M40 283.3 L500 117.3" stroke="var(--muted)" stroke-width="2.5" fill="none"/>
-          <path class="curve" d="M40 264.8 L500 98.8" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
-          <path class="curve" d="M40 227.0 L500 61.1" stroke="var(--spruce)" stroke-width="3" fill="none"/>
-          <circle cx="336.7" cy="120" r="5" fill="var(--spruce)"/>
-          <circle cx="441.3" cy="120" r="5" fill="var(--ink)"/>
-          <circle cx="492.6" cy="120" r="5" fill="var(--muted)"/>
-          <text x="276.7" y="80" fill="var(--spruce)" font-size="13" font-weight="700">Timber, 32 yrs</text>
-          <text x="329.3" y="182" fill="var(--ink)" font-size="13" font-weight="700">Concrete, 44 yrs</text>
-          <text x="406.6" y="216" fill="var(--muted)" font-size="13" font-weight="700">Steel, 49 yrs</text>
-        </svg>
-        <figcaption>Case study: the same two-storey London house built in three structural systems with low-embodied-energy materials, heat pump, PV and wind. Source: Ercal &amp; Shafique, Sustainable Horizons (2026).</figcaption>
+<title id="ctitle">Cumulative energy balance over 50 years</title>
+<desc id="cdesc">Three RNZE houses start with an energy debt from their materials and repay it with renewable surplus: timber after 32 years, concrete after 44, steel after 49.</desc>
+<line x1="40" y1="120" x2="500" y2="120" stroke="var(--sun)" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="46" y="112" fill="var(--muted)" font-size="12">Net zero</text>
+<text x="46" y="138" fill="var(--muted)" font-size="12">Energy debt</text>
+<line x1="40" y1="20" x2="40" y2="300" stroke="var(--line)"/>
+<text x="40" y="316" fill="var(--muted)" font-size="12">Year 0</text>
+<text x="455" y="316" fill="var(--muted)" font-size="12">Year 50</text>
+<path class="curve" d="M40 283.3 L500 117.3" stroke="var(--muted)" stroke-width="2.5" fill="none"/>
+<path class="curve" d="M40 264.8 L500 98.8" stroke="var(--ink)" stroke-width="2.5" fill="none"/>
+<path class="curve" d="M40 227.0 L500 61.1" stroke="var(--spruce)" stroke-width="3" fill="none"/>
+<circle cx="336.7" cy="120" r="5" fill="var(--spruce)"/><circle cx="441.3" cy="120" r="5" fill="var(--ink)"/><circle cx="492.6" cy="120" r="5" fill="var(--muted)"/>
+<text x="276.7" y="80" fill="var(--spruce)" font-size="13" font-weight="700">Timber, 32 yrs</text>
+<text x="329.3" y="182" fill="var(--ink)" font-size="13" font-weight="700">Concrete, 44 yrs</text>
+<text x="406.6" y="216" fill="var(--muted)" font-size="13" font-weight="700">Steel, 49 yrs</text>
+</svg>
+        <figcaption>Case study: the same two-storey London house built in three structural systems with low-embodied-energy materials, heat pump and on-site renewables. Wind is optional; PV-only designs also reach net zero within 50 years. Source: Ercal &amp; Shafique, Sustainable Horizons (2026).</figcaption>
       </figure>
     </div>
 
+    <section id="problem">
+      <h2>Buildings use around a third of the world's energy</h2>
+      <p>That demand drives emissions, exposes us to energy price shocks and keeps us dependent on imported fossil fuels. Yet most net zero claims only balance one year of operation and miss three things:</p>
+      <ul class="three" style="margin-top:2rem">
+        <li><h3>Embodied energy is ignored</h3><p>Thicker envelopes, extra insulation and multiple glazing add energy to make. A building can use less each year while its whole-life energy rises.</p></li>
+        <li><h3>Tools arrive too late</h3><p>Structure, materials, form and renewables are decided at concept stage, but detailed energy and life-cycle assessments usually come after.</p></li>
+        <li><h3>Early design is too complex</h3><p>Form, orientation, glazing, shading and insulation interact in millions of combinations. Conventional simulation is too slow to explore them while designing.</p></li>
+      </ul>
+    </section>
+
     <section id="how">
-      <h2>From the first design model to a net zero year</h2>
-      <ol class="steps">
-        <li><h3>Measure what it takes to build</h3><p>Upload a Revit material take-off. Embodied energy is calculated for every material from established cradle-to-gate factors.</p></li>
-        <li><h3>Add how it will run</h3><p>Heating, cooling, lighting and appliances are set against the solar and wind energy the building can generate on site.</p></li>
-        <li><h3>See the year and what to change</h3><p>Get the year the building reaches realistic net zero, plus lower-energy material, design and renewable options that bring it forward.</p></li>
+      <h2>One balance across the building's whole life</h2>
+      <ol class="three steps">
+        <li><h3>Minimise what it takes to build</h3><p>Upload a Revit material take-off. Embodied energy is calculated for every material, and structural systems and lower-energy materials are compared side by side.</p></li>
+        <li><h3>Minimise what it uses</h3><p>Heating, cooling, lighting and appliances are calculated, with the design strategies and technologies that cut demand most.</p></li>
+        <li><h3>Generate the rest</h3><p>Solar PV and, where suitable, wind are sized to cover the minimised energy, and the platform shows when the building repays its energy debt.</p></li>
       </ol>
       <div class="facts">
-        <div class="fact"><strong>84%</strong><span>lower annual operational energy in the case-study house</span></div>
+        <div class="fact"><strong>84%</strong><span>lower annual operational energy in the RNZE case-study house</span></div>
         <div class="fact"><strong>up to 34%</strong><span>less embodied energy through material choice alone</span></div>
-        <div class="fact"><strong>17 years</strong><span>between the fastest and slowest structural system to reach net zero</span></div>
+        <div class="fact"><strong>17 years</strong><span>difference in net zero timing caused by embodied energy alone</span></div>
       </div>
+    </section>
+
+    <section id="compare">
+      <div class="two">
+        <div>
+          <h2>Traditional houses never repay their energy. RNZE houses do.</h2>
+          <p>Over 50 years, each traditional case-study house uses about 3.5 million kWh with no on-site generation. The same house designed with RNZE uses about 0.65 to 0.72 million kWh, including the energy to make its materials, and its renewables generate about 0.72 million kWh: enough to repay the full balance.</p>
+        </div>
+        <figure class="chart">
+          <svg viewBox="0 0 660 310" role="img" aria-labelledby="ct2 cd2">
+<title id="ct2">50-year energy: traditional versus RNZE houses</title>
+<desc id="cd2">Traditional houses use about 3.5 million kWh over 50 years with no generation. RNZE versions use about 0.65 to 0.72 million kWh, which their 0.72 million kWh of renewable generation covers.</desc>
+<style>.lbl{font:600 15px var(--font);fill:var(--ink)} .val{font:13px var(--font);fill:var(--muted)} .lg{font:13px var(--font);fill:var(--ink)}</style>
+<text x="100" y="60" text-anchor="end" class="lbl">Steel</text>
+<rect x="110" y="30" width="409.7" height="16" fill="var(--muted)" rx="3"/><text x="525.7" y="42" class="val">3.61M</text>
+<rect x="110" y="50" width="81.5" height="16" fill="var(--spruce)" rx="3"/><text x="197.5" y="62" class="val">0.72M</text>
+<rect x="110" y="70" width="81.9" height="16" fill="var(--sun)" rx="3"/><text x="197.9" y="82" class="val">0.72M</text>
+<text x="100" y="144" text-anchor="end" class="lbl">Concrete</text>
+<rect x="110" y="114" width="402.3" height="16" fill="var(--muted)" rx="3"/><text x="518.3" y="126" class="val">3.54M</text>
+<rect x="110" y="134" width="78.9" height="16" fill="var(--spruce)" rx="3"/><text x="194.9" y="146" class="val">0.70M</text>
+<rect x="110" y="154" width="81.9" height="16" fill="var(--sun)" rx="3"/><text x="197.9" y="166" class="val">0.72M</text>
+<text x="100" y="228" text-anchor="end" class="lbl">Timber</text>
+<rect x="110" y="198" width="391.9" height="16" fill="var(--muted)" rx="3"/><text x="507.9" y="210" class="val">3.45M</text>
+<rect x="110" y="218" width="73.6" height="16" fill="var(--spruce)" rx="3"/><text x="189.6" y="230" class="val">0.65M</text>
+<rect x="110" y="238" width="81.9" height="16" fill="var(--sun)" rx="3"/><text x="197.9" y="250" class="val">0.72M</text>
+<rect x="110" y="286" width="12" height="12" fill="var(--muted)" rx="2"/><text x="128" y="296" class="lg">Traditional: energy used</text>
+<rect x="280" y="286" width="12" height="12" fill="var(--spruce)" rx="2"/><text x="298" y="296" class="lg">RNZE: energy used</text>
+<rect x="430" y="286" width="12" height="12" fill="var(--sun)" rx="2"/><text x="448" y="296" class="lg">RNZE: renewable generation</text>
+</svg>
+          <figcaption>50-year totals, kWh: embodied plus operational energy, and on-site renewable generation. Source: RNZEB case study.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="next">
+      <span class="tag">Coming next · 2027 to 2028</span>
+      <h2>AI-assisted passive design</h2>
+      <p>We are building an AI layer that predicts energy performance from early design parameters in seconds, not hours. It evaluates the whole space of passive design options, such as form, orientation, glazing, shading and insulation, and shows architects the most efficient combinations while the design is still open. AI supports the architect's judgement; it does not replace it.</p>
+      <p class="note">Based on the founder's research paper in preparation: AI-Assisted Passive Design Optimisation for Net Zero Buildings.</p>
+    </section>
+
+    <section id="mission">
+      <h2>Our mission</h2>
+      <p class="mission">Energy independence cannot be delivered by government investment alone. It requires every building, and everyone who designs, builds and lives in one, to become part of the solution. NZE Intelligence exists to make that possible from the very first design decision: less energy demand, lower-energy materials and clean energy generated where it is used.</p>
     </section>
 
     <section id="research">
       <div class="two">
         <div>
           <h2>Built on peer-reviewed research</h2>
-          <p>NZE Intelligence turns the Realistic Net Zero Energy Building (RNZEB) method into a design tool. The method was developed in a Master’s dissertation awarded the Dean’s Prize for Innovation and Impact at Brunel University London.</p>
+          <p>NZE Intelligence turns the Realistic Net Zero Energy Building (RNZEB) method into a design tool. The method was developed in a Master's dissertation that scored 93.5 and won Brunel University London's Dean's Prize for Innovation and Impact, awarded to a single student each year across five engineering and management programmes.</p>
         </div>
         <ul class="pubs">
           <li><a href="https://doi.org/10.1016/j.horiz.2025.100163">Rethinking net zero: a new perspective on achieving net zero energy buildings</a><em>Ercal, O. and Shafique, M. Sustainable Horizons, 2026</em></li>
           <li><a href="https://dx.doi.org/10.20517/cf.2026.02">From design to decarbonisation: a BIM-based comparative analysis of embodied carbon in buildings</a><em>Ercal, O. and Shafique, M. Carbon Footprints, 2026</em></li>
+          <li>AI-assisted passive design optimisation for net zero buildings<em>Ercal, O. In preparation</em></li>
         </ul>
       </div>
     </section>
@@ -151,20 +187,20 @@
       <div class="two">
         <div>
           <h2>Founder</h2>
-          <p>Orhan Ercal is an architect and sustainability researcher with ten years of design and construction experience in the UK and Türkiye. He founded NZE Intelligence to give architects and developers a clear, early answer to the question that matters: when does this building actually reach net zero?</p>
+          <p>Orhan Ercal is an architect and sustainability specialist with over ten years of design, site and construction management experience. He founded NZE Intelligence to give architects and developers a clear, early answer to the question that matters: how does this building genuinely reach net zero?</p>
+          <p><a href="http://www.linkedin.com/in/orhan-ercal-390182296">Orhan Ercal on LinkedIn</a></p>
         </div>
-        <div>
-          <h2>Talk to us</h2>
-          <p>We are working with a small number of UK architects and housing developers on early pilots.</p>
-          <a class="btn primary" href="mailto:orhanercal@gmail.com">Email us</a>
+        <div class="pilot" id="pilot">
+          <h2>Join the 2027 pilot</h2>
+          <p>We are inviting three UK architecture practices and housing developers to join our 2027 pilot programme: a free realistic net zero analysis of one of your projects, in exchange for feedback.</p>
+          <a class="btn primary" href="mailto:orhanercal@gmail.com?subject=NZE%20Intelligence%202027%20pilot">Register interest</a>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
     <p>NZE Intelligence Ltd is a private limited company registered in England and Wales, company number 17544117.</p>
-    <p>Registered office: 271b High Road, London N15 4RR, United Kingdom.</p>
+    <p>Registered office: 271b High Road, London N15 4RR, United Kingdom. <a href="privacy.html">Privacy policy</a></p>
     <p>© 2026 NZE Intelligence Ltd</p>
   </footer>
 </div>
